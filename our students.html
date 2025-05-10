@@ -50,50 +50,6 @@
     <noscript>
       <link rel="stylesheet" href="assets/css/noscript.css" />
     </noscript>
-
-    <!-- Gallery CSS Styles -->
-    <style>
-      /* Gallery container styling */
-      .gallery-container {
-        position: relative;
-        width: 100%;
-        max-width: 800px;
-        margin: 20px auto;
-        overflow: hidden;
-      }
-      /* Each image in the gallery (initially hidden) */
-      .gallery-container img {
-        width: 100%;
-        opacity: 0;
-        transition: opacity 1s ease-in-out;
-        position: absolute;
-        top: 0;
-        left: 0;
-      }
-      /* Only the active image is visible */
-      .gallery-container img.active {
-        opacity: 1;
-        position: relative;
-      }
-      /* Navigation buttons for the gallery */
-      .gallery-btn {
-        position: relative;
-        top: 50%;
-        transform: translateY(-50%);
-        background: #ffffff00;
-        color: #ffffff05;
-        border: none;
-        padding: 1px 1px;
-        cursor: pointer;
-        z-index: 10;
-      }
-      #prevBtn {
-        left: 1cm;
-      }
-      #nextBtn {
-        right: 1cm;
-      }
-    </style>
   </head>
   <body class="is-preload">
 
@@ -114,230 +70,178 @@
           </header>
 
           <!-- Main Content Section: Best Students -->
-          <section>
-            <header class="main">
-              <h1>Best Students of Last Year 🌟</h1>
+          <section> 
+            <header class="main" style="text-align: center; margin-bottom: 20px;">
+              <h1>CRAYON PRIX AT A GLANCE🌟</h1>
             </header>
+
+           <!-- Navigation Buttons -->
+         <nav class="nav-buttons">
+          <a href="#achievements-gallery">Achievements</a>
+          <a href="#activities-gallery">Extra-curricular</a>
+          <a href="#about-us">About Us</a>
+        </nav>  
             
-            <!-- Student Entry 1 -->
-            <div class="student-entry">
-              <h4>Sarah Muto 🌟</h4>
-              <p>
-                <span class="image left">
-                  <img src="images/student_02.jpg" alt="Portrait of Sarah Muto, Best in Maths" />
-                </span>
-                <strong>Best in Maths</strong><br />
-                Sarah is known for her dedication and brilliance in mathematics.
-              </p>
-              <ul class="actions fit">
-                <li><a href="#" class="button fit">Click Here to See Her in Action 👉</a></li>
-              </ul>
-            </div>
-            
-            <!-- Student Entry 2 -->
-            <div class="student-entry">
-              <h4>Learnmore Moto 🚀</h4>
-              <p>
-                <span class="image left">
-                  <img src="images/student_01.jpg" alt="Portrait of Learnmore Moto, Top Achiever" />
-                </span>
-                <strong>Best in Maths</strong><br />
-                Learnmore excels in creative problem-solving and analytical thinking.
-              </p>
-              <ul class="actions fit">
-                <li><a href="#" class="button fit">Click Here to See Him in Action 👉</a></li>
-              </ul>
-            </div>
-            
-            <!-- Student Entry 3 -->
-            <div class="student-entry">
-              <h4>Sarah Muto 🌟</h4>
-              <p>
-                <span class="image left">
-                  <img src="images/student_04.jpg" alt="Portrait of Sarah Muto, Mathematics Star" />
-                </span>
-                <strong>Best in Maths</strong><br />
-                Her focus and perseverance in tackling challenging problems set her apart.
-              </p>
-              <ul class="actions fit">
-                <li><a href="#" class="button fit">Click Here to See Her in Action 👉</a></li>
-              </ul>
-            </div>
-            
-            <!-- Student Entry 4 -->
-            <div class="student-entry">
-              <h4>Learnmore Moto 🚀</h4>
-              <p>
-                <span class="image left">
-                  <img src="images/student_01.jpg" alt="Portrait of Learnmore Moto, Top in Maths" />
-                </span>
-                <strong>Best in Maths</strong><br />
-                Known for consistent growth and outstanding academic performance.
-              </p>
-              <ul class="actions fit">
-                <li><a href="#" class="button fit">Click Here to See Him in Action 👉</a></li>
-              </ul>
-            </div>
-          </section>
-          
-          <!-- Transition Gallery Section: Additional Best Students -->
-          <section id="additional-gallery" class="gallery">
-            <header class="main">
-              <h2>Other Best Students</h2>
-              <p>Discover more outstanding students who achieved excellence but were left out of the main list.</p>
-            </header>
-            <div class="gallery-container">
-              <img src="images/student_04.jpg" alt="Student Image 5" class="gallery-image active">
-              <img src="images/student_03.jpg" alt="Student Image 6" class="gallery-image">
-              <img src="images/student_01.jpg" alt="Student Image 7" class="gallery-image">
-            </div>
-            <button id="prevBtn" class="gallery-btn"></button>
-            <button id="nextBtn" class="gallery-btn"></button>
-          </section>
-          
-          <!-- Article Links: Important Links & Get In Touch -->
-          <div class="posts">
-            <article>
-              <h3>IMPORTANT LINKS 🔗</h3>
-              <ul class="actions">
-                <li><a href="#" class="button">Virtual Tour 🏠</a></li>
-              </ul>
-              <ul class="actions">
-                <li><a href="#" class="button">Fees Structure 💵</a></li>
-              </ul>
-              <ul class="actions">
-                <li><a href="#" class="button">Resources</a></li>
-              </ul>
-            </article>
-            <article>
-              <h3>GET IN TOUCH 📞</h3>
-              <ul class="contact">
-                <li class="icon solid fa-envelope"><a href="mailto:info@crayonprix.com">info@crayonprix.com</a></li>
-                <li class="icon solid fa-phone">+263 77 777 7777</li>
-                <li class="icon solid fa-home">
-                  9515 Southview Park<br />
-                  Harare, Zimbabwe
-                </li>
-              </ul>
-            </article>
+        <!-- Achievements Gallery -->
+        <section id="achievements-gallery" class="gallery">
+          <header class="main">
+            <h2>Our Achievements in Harare</h2>
+          </header>
+          <div class="gallery-container">
+            <img src="images/harare_achievement1.jpg" alt="Students receiving academic awards at a local Harare ceremony" class="gallery-image active">
+            <img src="images/harare_achievement2.jpg" alt="Innovative student project displayed at a Harare technology fair" class="gallery-image">
+            <img src="images/harare_achievement3.jpg" alt="Community development initiative in a Harare neighborhood" class="gallery-image">
           </div>
-          
-        </div>
-      </div>
-      
-      <!-- Sidebar -->
-      <div id="sidebar">
-        <div class="inner">
-          <!-- Menu -->
-          <nav id="menu">
-            <header class="major">
-              <h2>Menu 📋</h2>
-            </header>
-            <ul>
-              <li><a href="index.html">Homepage 🏠</a></li>
-              <li>
-                <span class="opener">Programs 🎓</span>
-                <ul>
-                  <li><a href="day care.html">Day Care 👶</a></li>
-                  <li><a href="ecd.html">ECD A &amp; B 📚</a></li>
-                  <li><a href="grade 1.html">Grade 1 ✏️</a></li>
-                </ul>
-              </li>
-              <li><a href="our students.html">Our Best Students ⭐</a></li>
-              <li><a href="our staff.html">Our Staff 👥</a></li>
-            </ul>
-          </nav>
-          
-          <!-- Our Programs Section in Sidebar -->
-          <section>
-            <header class="major">
-              <h2>Our Programs 🎨</h2>
-            </header>
-            <div class="mini-posts">
-              <article>
-                <a href="day care.html" class="image">
-                  <img src="images/day-care-01.jpg" alt="Day Care program from 18 months">
-                </a>
-                <p>Day Care from 18 months</p>
-              </article>
-              <article>
-                <a href="ecd.html" class="image">
-                  <img src="images/ecd-01.jpg" alt="ECD A &amp; B program">
-                </a>
-                <p>ECD A &amp; B</p>
-              </article>
-              <article>
-                <a href="grade 1.html" class="image">
-                  <img src="images/ecd-05.jpg" alt="Grade 1 program overview">
-                </a>
-                <p>Grade 1</p>
-              </article>
+        </section>
+  
+        <!-- Extra Activities Gallery -->
+        <section id="activities-gallery" class="gallery">
+          <header class="main">
+            <h2>Our Extra-curricular Activities in Harare</h2>
+          </header>
+          <div class="gallery-container">
+            <img src="images/act 01.jpeg" alt="Harare school soccer tournament showcasing community spirit" class="gallery-image active">
+            <img src="images/act 02.jpg" alt="Students practicing traditional dance in a Harare cultural workshop" class="gallery-image">
+            <img src="images/act 04.jpg" alt="Art and music workshop celebrating local Harare creativity" class="gallery-image">
+            <img src="images/act 03.jpg" alt="Art and music workshop celebrating local Harare creativity" class="gallery-image">
+          </div>
+        </section>
+  
+        <!-- About Us Slideshow -->
+        <section id="about-us" class="gallery">
+          <header class="main" style="text-align: center; margin-bottom: 20px;">
+            <h2>About Us</h2>
+          </header>
+          <div class="gallery-container">
+            <div class="gallery-image active">
+              <p>
+                We are a vibrant institution based in Harare committed to excellence in education and community development.
+              </p>
             </div>
-          </section>
-          
-          <!-- Get In Touch in Sidebar -->
+            <div class="gallery-image">
+              <p>
+                Our dedicated team of educators works tirelessly to create a nurturing environment where every student can thrive.
+              </p>
+            </div>
+            <div class="gallery-image">
+              <p>
+                Our mission is to empower our students with the skills and values needed for success in a rapidly changing world while honoring the rich traditions and dynamic culture of Harare.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Posts Section: Important Links & Contact Information -->
+         <div style="text-align: center; margin-bottom: 20px;">
           <section>
-            <header class="major">
-              <h2>Get in Touch 🤝</h2>
-            </header>
+            <h3>IMPORTANT LINKS 🔗</h3>
+            <ul class="actions">
+              <li><a href="resources.html" class="button" style="text-align: center;">Virtual Tour</a></li>
+            </ul>
+            <ul class="actions">
+              <li><a href="resources.html" class="button">Fees Structure</a></li>
+            </ul>
+            <ul class="actions">
+              <li><a href="resources.html" class="button">Resources</a></li>
+            </ul>
+          </section>
+          <section>
+            <h3>GET IN TOUCH 📞</h3>
             <ul class="contact">
               <li class="icon solid fa-envelope"><a href="mailto:info@crayonprix.com">info@crayonprix.com</a></li>
               <li class="icon solid fa-phone">+263 77 777 7777</li>
               <li class="icon solid fa-home">
-                9515 Southview Park<br />
+                9515 Southview Park<br>
                 Harare, Zimbabwe
               </li>
             </ul>
           </section>
-          
-          <!-- Sidebar Footer -->
+        </div>
+      
+       <!-- Sidebar -->
+       <div id="sidebar">
+        <div class="inner">
+          <!-- Menu -->
+          <nav id="menu">
+            <header class="major">
+              <h2>Menu </h2>
+            </header>
+            <ul>
+              <li><a href="index.html">Homepage </a></li>
+              <li>
+                <span class="opener">Programs </span>
+                <ul>
+                  <li><a href="day care.html">Day Care </a></li>
+                  <li><a href="ecd.html">ECD A &amp; B</a></li>
+                  <li><a href="grade 1.html">Grade 1 </a></li>
+                </ul>
+              </li>
+              <li><a href="our students.html">Our Best Students </a></li>
+              <li><a href="our staff.html">Our Staff </a></li>
+              <li><a href="resources.html">Parents Resources</a></li>
+            </ul>
+          </nav>
+        
+          <!-- Programs Section -->
+          <section>
+            <header class="major">
+              <h2>Our Programs </h2>
+            </header>
+            <div class="mini-posts">
+              <article>
+                <a href="day care.html" class="image"><img src="images/day_care_01.jpg" alt="Day Care from 18 months" /></a>
+                <p>Day Care from 18 months</p>
+              </article>
+              <article>
+                <a href="ecd.html" class="image"><img src="images/ecd_01.jpg" alt="ECD A &amp; B" /></a>
+                <p>ECD A &amp; B</p>
+              </article>
+              <article>
+                <a href="grade 1.html" class="image"><img src="images/ecd_05.jpg" alt="Grade 1" /></a>
+                <p>Grade 1</p>
+              </article>
+            </div>
+          </section>
+        
+          <!-- Get In Touch -->
+          <section>
+            <header class="major">
+              <h2>Get In Touch 🤝</h2>
+            </header>
+            <ul class="contact">
+              <li class="icon solid fa-envelope">
+                <a href="mailto:info@crayonprix.com">info@crayonprix.com</a>
+              </li>
+              <li class="icon solid fa-phone">+263 77 777 7777</li>
+              <li class="icon solid fa-home">9515 Southview Park<br>Harare, Zimbabwe</li>
+            </ul>
+          </section>
+        
+          <!-- Footer -->
           <footer id="footer">
             <p class="copyright">
-              &copy; Untitled. All rights reserved. Demo Images:
-              <a href="https://unsplash.com" target="_blank" rel="noopener noreferrer">Unsplash</a>.
+              &copy; Untitled. All rights reserved. Demo Images: 
+              <a href="https://unsplash.com" target="_blank" rel="noopener noreferrer">Unsplash</a>. 
               Design: <a href="https://html5up.net" target="_blank" rel="noopener noreferrer">HTML5 UP</a>.
             </p>
           </footer>
-          
         </div>
       </div>
-      
-    </div>
-    
-    <!-- Scripts -->
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/browser.min.js"></script>
-    <script src="assets/js/breakpoints.min.js"></script>
-    <script src="assets/js/util.js"></script>
-    <script src="assets/js/main.js"></script>
-    
-    <!-- Gallery Transition JavaScript -->
-    <script>
-      document.addEventListener("DOMContentLoaded", function() {
-        // Select only images in the additional gallery section
-        var images = document.querySelectorAll('#additional-gallery .gallery-image');
-        var currentIndex = 0;
-  
-        function showImage(index) {
-          images[currentIndex].classList.remove('active');
-          currentIndex = (index + images.length) % images.length;
-          images[currentIndex].classList.add('active');
-        }
-  
-        document.getElementById('prevBtn').addEventListener('click', function() {
-          showImage(currentIndex - 1);
-        });
-        document.getElementById('nextBtn').addEventListener('click', function() {
-          showImage(currentIndex + 1);
-        });
-  
-        // Auto-transition every 5 seconds
-        setInterval(function() {
-          showImage(currentIndex + 1);
-        }, 5000);
-      });
-    </script>
-    
-  </body>
-</html>
 
+      <a href="https://api.whatsapp.com/send?phone=YOUR_PHONE_NUMBER&text=Hello%20there!" 
+      target="_blank" 
+      class="floating-whatsapp-btn">
+      <i class="fa fa-whatsapp"></i>
+      </a>
+
+    </div>
+
+<!-- Scripts -->
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/browser.min.js"></script>
+<script src="assets/js/breakpoints.min.js"></script>
+<script src="assets/js/util.js"></script>
+<script src="assets/js/main.js"></script>
+
+</body>
+</html>

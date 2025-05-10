@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Showcase Gallery & Information</title>
+    <!-- Global Styles -->
+    <style>
+      /* Reset some defaults */
+      *, *::before, *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        background: #f4f4f4;
+        color: #333;
+        scroll-behavior: smooth; /* Enables smooth scrolling for anchor links */
+      }
+      /* Central wrapper for content */
+      #wrapper {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+      /* Header styling */
+      #header {
+        background: #fff;
+        padding: 10px 20px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        margin-bottom: 20px;
+      }
+      #header ul {
+        list-style: none;
+        display: flex;
+      }
+      #header ul li {
+        margin-right: 15px;
+      }
+      #header ul li a {
+        text-decoration: none;
+        color: #333;
+      }
+      /* Navigation Buttons Styling */
+      .nav-buttons {
+        text-align: center;
+        margin: 20px 0;
+      }
+      .nav-buttons a {
+        display: inline-block;
+        background: #007bff;
+        color: #fff;
+        padding: 10px 20px;
+        margin: 5px;
+        text-decoration: none;
+        border-radius: 4px;
+        transition: background 0.3s ease;
+      }
+      .nav-buttons a:hover {
+        background: #0056b3;
+      }
+  
+      /* Gallery Styles */
+      .gallery {
+        margin-bottom: 40px;
+      }
+      .gallery header.main {
+        margin-bottom: 10px;
+        text-align: center;
+      }
+      .gallery-container {
+        position: relative;
+        width: 100%;
+        max-width: 800px;
+        margin: 20px auto;
+        overflow: hidden;
+        background: #fff;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        min-height: 250px;  /* Ensures a consistent height for all slides */
+      }
+      /* Slide styling for both images and text-based slides */
+      .gallery-container .gallery-image {
+        width: 100%;
+        opacity: 0;
+        transition: opacity 1s ease-in-out;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+      .gallery-container .gallery-image.active {
+        opacity: 1;
+        position: relative;
+      }
+      /* Specific styling for text slides in About Us */
+      #about-us .gallery-image {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 250px;
+        padding: 20px;
+      }
+      #about-us p {
+        font-size: 18px;
+        text-align: center;
+      }
+  
+      /* Posts (Contact) Section Styling */
+      .posts {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        margin-top: 40px;
+      }
+      .posts article {
+        background: #fff;
+        padding: 20px;
+        flex: 1;
+        min-width: 280px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+      .posts h3 {
+        margin-bottom: 10px;
+      }
+      .posts ul.actions {
+        list-style: none;
+        padding: 0;
+      }
+      .posts ul.actions li {
+        margin-bottom: 5px;
+      }
+      .posts a.button {
+        background: #007bff;
+        color: #fff;
+        padding: 8px 12px;
+        text-decoration: none;
+        border-radius: 4px;
+      }
+      .contact li {
+        margin-bottom: 10px;
+      }
+    </style>
+  </head>
+  <body class="is-preload">
+    <div id="wrapper">
+      <!-- Site Header -->
+      <header id="header">
+        <ul class="icons">
+          <li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+          <li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+          <li><a href="#" class="icon brands fa-snapchat-ghost"><span class="label">Snapchat</span></a></li>
+          <li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+          <li><a href="#" class="icon brands fa-medium-m"><span class="label">Medium</span></a></li>
+        </ul>
+      </header>
+      
+      <!-- Navigation Buttons -->
+      <nav class="nav-buttons">
+        <a href="#achievements-gallery">Achievements</a>
+        <a href="#activities-gallery">Extra-curricular</a>
+        <a href="#about-us">About Us</a>
+        <a href="#contact">Contact</a>
+      </nav>
+  
+      <!-- Main Content -->
+      <section>
+        <header class="main" style="text-align: center; margin-bottom: 20px;">
+          <h1>Celebrating Student Life in Harare 🌟</h1>
+        </header>
+  
+        <!-- Achievements Gallery -->
+        <section id="achievements-gallery" class="gallery">
+          <header class="main">
+            <h2>Our Achievements in Harare</h2>
+          </header>
+          <div class="gallery-container">
+            <img src="images/harare_achievement1.jpg" alt="Students receiving academic awards at a local Harare ceremony" class="gallery-image active">
+            <img src="images/harare_achievement2.jpg" alt="Innovative student project displayed at a Harare technology fair" class="gallery-image">
+            <img src="images/harare_achievement3.jpg" alt="Community development initiative in a Harare neighborhood" class="gallery-image">
+          </div>
+        </section>
+  
+        <!-- Extra Activities Gallery -->
+        <section id="activities-gallery" class="gallery">
+          <header class="main">
+            <h2>Our Extra-curricular Activities in Harare</h2>
+          </header>
+          <div class="gallery-container">
+            <img src="images/harare_activity1.jpg" alt="Harare school soccer tournament showcasing community spirit" class="gallery-image active">
+            <img src="images/harare_activity2.jpg" alt="Students practicing traditional dance in a Harare cultural workshop" class="gallery-image">
+            <img src="images/harare_activity3.jpg" alt="Art and music workshop celebrating local Harare creativity" class="gallery-image">
+          </div>
+        </section>
+  
+        <!-- About Us Slideshow -->
+        <section id="about-us" class="gallery">
+          <header class="main" style="text-align: center; margin-bottom: 20px;">
+            <h2>About Us</h2>
+          </header>
+          <div class="gallery-container">
+            <div class="gallery-image active">
+              <p>
+                We are a vibrant institution based in Harare committed to excellence in education and community development.
+              </p>
+            </div>
+            <div class="gallery-image">
+              <p>
+                Our dedicated team of educators works tirelessly to create a nurturing environment where every student can thrive.
+              </p>
+            </div>
+            <div class="gallery-image">
+              <p>
+                Our mission is to empower our students with the skills and values needed for success in a rapidly changing world while honoring the rich traditions and dynamic culture of Harare.
+              </p>
+            </div>
+          </div>
+        </section>
+  
+        <!-- Posts Section: Important Links & Contact Information -->
+        <div id="contact" class="posts">
+          <article>
+            <h3>IMPORTANT LINKS 🔗</h3>
+            <ul class="actions">
+              <li><a href="#" class="button">Virtual Tour 🏠</a></li>
+              <li><a href="#" class="button">Fees Structure 💵</a></li>
+              <li><a href="#" class="button">Resources</a></li>
+            </ul>
+          </article>
+          <article>
+            <h3>GET IN TOUCH 📞</h3>
+            <ul class="contact">
+              <li class="icon solid fa-envelope"><a href="mailto:info@crayonprix.com">info@crayonprix.com</a></li>
+              <li class="icon solid fa-phone">+263 77 777 7777</li>
+              <li class="icon solid fa-home">
+                9515 Southview Park<br>
+                Harare, Zimbabwe
+              </li>
+            </ul>
+          </article>
+        </div>
+      </section>
+    </div>
+  +
