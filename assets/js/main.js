@@ -234,6 +234,51 @@
 
 				});
 
+				document.addEventListener("DOMContentLoaded", function() {
+					const watBtn = document.querySelector('.floating-whatsapp-btn');
+					
+					// Initially hide the button
+					watBtn.style.opacity = 0;
+					
+					// Fade in the button after 1 second
+					setTimeout(() => {
+					  watBtn.style.transition = 'opacity 1s';
+					  watBtn.style.opacity = 1;
+					}, 1000);
+				  });
+
+		      // For each gallery container, auto loop through slides every 3 seconds with pause on hover.
+			  document.querySelectorAll('.gallery-container').forEach(function (container) {
+				const slides = container.querySelectorAll('.gallery-image');
+				let currentIndex = 0;
+				let intervalId = null;
+		  
+				function showSlide(index) {
+				  slides.forEach((slide, i) => {
+					slide.classList.toggle('active', i === index);
+				  });
+				}
+		  
+				function startSlideshow() {
+				  intervalId = setInterval(function () {
+					currentIndex = (currentIndex + 1) % slides.length;
+					showSlide(currentIndex);
+				  }, 3000);
+				}
+		  
+				function stopSlideshow() {
+				  clearInterval(intervalId);
+				  intervalId = null;
+				}
+		  
+				// Start the slideshow initially
+				startSlideshow();
+		  
+				// Pause on mouse over, resume on mouse out
+				container.addEventListener('mouseover', stopSlideshow);
+				container.addEventListener('mouseout', startSlideshow);
+			  });
+
 	// Menu.
 		var $menu = $('#menu'),
 			$menu_openers = $menu.children('ul').find('.opener');
@@ -254,6 +299,7 @@
 
 					// Trigger resize (sidebar lock).
 						$window.triggerHandler('resize.sidebar-lock');
+						
 
 				});
 

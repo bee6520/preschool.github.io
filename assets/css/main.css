@@ -2319,3 +2319,105 @@ button,
     border-top: 0;
     margin-top: 0;
     padding-top: 0; }
+  /* Styling for the floating WhatsApp button */
+    .floating-whatsapp-btn {
+      position: fixed;
+      width: 60px;
+      height: 60px;
+      bottom: 40px;
+      right: 40px;
+      background-color: #25D366;
+      color: #FFF;
+      border-radius: 50%;
+      text-align: center;
+      font-size: 30px;
+      line-height: 60px;
+      box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3);
+      z-index: 1000;
+      transition: background-color 0.3s ease;
+    }
+
+     /* Reset some defaults */
+     *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      background: #f4f4f4;
+      color: #333;
+      scroll-behavior: smooth; /* Enables smooth scrolling for anchor links */
+    }
+    /* Central wrapper for content */
+    #wrapper {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    
+    /* Navigation Buttons Styling */
+    .nav-buttons {
+      text-align: center;
+      margin: 20px 0;
+    }
+    .nav-buttons a {
+      display: inline-block;
+      background: #aab4c0af;
+      color: #070707;
+      padding: 10px 20px;
+      margin: 5px;
+      text-decoration: none;
+      border-radius: 4px;
+      transition: background 0.3s ease;
+    }
+    .nav-buttons a:hover {
+      background: #40454b4d;
+    }
+
+    /* Gallery Styles */
+    .gallery {
+      margin-bottom: 40px;
+    }
+    .gallery header.main {
+      margin-bottom: 10px;
+      text-align: center;
+    }
+    .gallery-container {
+      position: relative;
+      width: 100%;
+      max-width: 800px;
+      margin: 20px auto;
+      overflow: hidden;
+      background: #fff;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      min-height: 250px;  /* Ensures a consistent height for all slides */
+    }
+    /* Slide styling for both images and text-based slides */
+    .gallery-container .gallery-image {
+      width: 100%;
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+    .gallery-container .gallery-image.active {
+      opacity: 1;
+      position: relative;
+    }
+    /* Specific styling for text slides in About Us */
+    #about-us .gallery-image {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 250px;
+      padding: 20px;
+    }
+    #about-us p {
+      font-size: 18px;
+      text-align: center;
+    }
+
+    
