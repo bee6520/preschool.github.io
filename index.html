@@ -76,8 +76,23 @@
             <header>
               <h1>Where Care Meets Fun and Learning! 🎉</h1>
             </header>
+            <!-- Button to trigger the video modal -->
+            
+
+            <!-- The Modal -->
+            <div id="videoModal" class="modal">
+              <div class="modal-content">
+                <!-- The close button -->
+                <span class="close">&times;</span>
+                <!-- The video element -->
+                <video id="modalVideo" controls>
+                  <source src="download/video.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+            </div>
             <ul class="actions">
-              <li><a href="#" class="button">Virtual Tour</a></li>
+              <button id="openModalBtn">Virtual Tour</button>
               <li><a href="application.html" class="button">Apply Now </a></li>
             </ul>
           </div>
