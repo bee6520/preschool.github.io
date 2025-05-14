@@ -303,6 +303,34 @@
 
 				});
 
+				    // Get references to DOM elements
+    const modal = document.getElementById('videoModal');
+    const openModalBtn = document.getElementById('openModalBtn');
+    const closeModalBtn = document.querySelector('.close');
+    const modalVideo = document.getElementById('modalVideo');
+
+    // Open the modal when the button is clicked
+    openModalBtn.addEventListener('click', function () {
+      modal.style.display = 'block';
+    });
+
+    // Close the modal when the close button is clicked
+    closeModalBtn.addEventListener('click', function () {
+      modal.style.display = 'none';
+      // Pause the video and reset playback to the beginning
+      modalVideo.pause();
+      modalVideo.currentTime = 0;
+    });
+
+    // Close the modal when clicking anywhere outside the modal content
+    window.addEventListener('click', function (event) {
+      if (event.target === modal) {
+        modal.style.display = 'none';
+        modalVideo.pause();
+        modalVideo.currentTime = 0;
+      }
+    });
+
 			});
 
 })(jQuery);
