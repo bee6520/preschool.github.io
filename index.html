@@ -58,8 +58,8 @@
     <div id="main">
       <div class="inner">
 
-        <!-- Header -->
         <header id="header">
+          <link rel="preload" as="image" href="images/our_logo.gif">
           <a href="index.html" class="logo"><strong>CRAYON PREPARATORY SCHOOL</strong></a>
           <ul class="icons">
             <li><a href="#" class="icon brands fa-youtube"><span class="label">Twitter</span></a></li>
@@ -77,7 +77,6 @@
               <h1>Where Care Meets Fun and Learning! 🎉</h1>
             </header>
             <!-- Button to trigger the video modal -->
-            
 
             <!-- The Modal -->
             <div id="videoModal" class="modal">
@@ -97,18 +96,19 @@
             </ul>
           </div>
           <span class="image object">
-            <img src="images/our_logo.gif" alt="Crayon Preparatory School Logo" />
+            <!-- Added fetchpriority="high" to force preload of the GIF -->
+            <img src="images/our_logo.gif" alt="Crayon Preparatory School Logo" fetchpriority="high" />
           </span>
         </section>
 
         <!-- Overview Section -->
         <section>
-          <header class="major"style="text-align: center;">
+          <header class="major" style="text-align: center;">
             <h2>✨A Brief Overview ✨</h2>
           </header>
           <div class="posts" style="background-color: #a5a8a80c; text-align: center;">
             <article>
-              <a href="our students.html" class="image"><img src="images/teacher_01.jpg" alt="Our Vision In Action" /></a>
+              <a href="about us.html" class="image"><img src="images/teacher_01.jpg" alt="Our Vision In Action" /></a>
               <h3>Our Vision </h3>
               <p>To empower children with the skills to tackle an ever-changing world. Discover how we nurture future leaders.</p>
               <ul class="actions">
@@ -144,44 +144,52 @@
 
         <!-- Age Section -->
         <section>
-          <header class="major"style="text-align: center;">
+          <header class="major" style="text-align: center;">
             <h2>How Old is Your Child?</h2>
           </header>
           <div class="mini-posts">
             <article>
-              <a href="day care.html" class="image"><img src="images/18_months.jpg" alt="Day Care for Ages 18 months - 3 years" /></a>
+              <a href="day care.html" class="image">
+                <!-- Added loading="lazy" for lazy loading -->
+                <img src="images/18_months.jpg" alt="Day Care for Ages 18 months - 3 years" loading="lazy" />
+              </a>
               <li style="text-align: center;">
                 <a href="day care.html" class="button">18 months - 3 years</a>
               </li>
             </article>
             <article>
-              <a href="ecd.html" class="image"><img src="images/ecd_05.jpg" alt="ECD for Ages 3 - 5 years" /></a>
+              <a href="ecd.html" class="image">
+                <!-- Added loading="lazy" for lazy loading -->
+                <img src="images/ecd_05.jpg" alt="ECD for Ages 3 - 5 years" loading="lazy" />
+              </a>
               <li style="text-align: center;">
                 <a href="ecd.html" class="button">3 - 5 years</a>
               </li>
             </article>
             <article>
-              <a href="grade 1.html" class="image"><img src="images/grade _1.jpg" alt="Grade 1 for Ages 5+ years" /></a>
+              <a href="grade 1.html" class="image">
+                <!-- Added loading="lazy" for lazy loading -->
+                <img src="images/grade _1.jpg" alt="Grade 1 for Ages 5+ years" loading="lazy" />
+              </a>
               <li style="text-align: center;">
                 <a href="grade 1.html" class="button">5+ years</a>
               </li>
             </article>
           </div>
         </section>
-    </div>
-      <!-- Additional Links and Contact Info-->
-      <div class="box" style="text-align: center;">
-        <h3>Get In Touch 📞</h3>
-          <p><a href="mailto:info@crayonprix.com">info@crayonprix.com</a><br/>
-          <br/>9515 Southview ParkHarare, Zimbabwe<br/>
-          <br/>+263 77 777 7777<br/>.</p>
-          <h3>Important Links 🔗</h3>
-          <p><a href="resources.html">virtual tour </a><br/><br/>
-          <a href="resources.html">fees Structure</a><br/><br/>
-          <a href="resources.html">daily schedules </a><br/><br/>
-          <a href="resources.html">Our healthy and safety measures  </a</p> 
-      </div>
-    </div>
+        </div>
+        <!-- Additional Links and Contact Info-->
+        <div class="box" style="text-align: center;">
+          <h3>Get In Touch 📞</h3>
+            <p><a href="mailto:info@crayonprix.com">info@crayonprix.com</a><br/>
+            <br/>9515 Southview ParkHarare, Zimbabwe<br/>
+            <br/>+263 77 777 7777<br/>.</p>
+            <h3>Important Links 🔗</h3>
+            <p><a href="resources.html">virtual tour </a><br/><br/>
+            <a href="resources.html">fees Structure</a><br/><br/>
+            <a href="resources.html">daily schedules </a><br/><br/>
+            <a href="resources.html">Our healthy and safety measures  </a</p>
+        </div>
 
      <!-- Sidebar -->
  <div id="sidebar">
@@ -201,7 +209,7 @@
             <li><a href="grade 1.html">Grade 1 </a></li>
           </ul>
         </li>
-        <li><a href="our students.html">Our Best Students </a></li>
+        <li><a href="about us.html">About Us</a></li>
         <li><a href="our staff.html">Our Staff </a></li>
         <li><a href="resources.html">Parents Resources</a></li>
       </ul>
